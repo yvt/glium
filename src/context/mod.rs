@@ -644,7 +644,6 @@ impl ContextExt for Context {
             let backend = self.backend.borrow();
             if !backend.is_current() {
                 unsafe { backend.make_current() };
-                debug_assert!(backend.is_current());
             }
         }
 
